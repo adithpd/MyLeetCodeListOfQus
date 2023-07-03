@@ -22,6 +22,7 @@ class Solution(object):
 
 """
 This cannot be solved with constant space without
-understanding "Floyd's Cycle Detection Algorithm" 
-and "Linked List Cycle Problem"
+understanding "Floyd's Cycle Detection Algorithm"
+also knows as "Tortoise and Hare Problem" and 
+"Linked List Cycle Problem"
 """
