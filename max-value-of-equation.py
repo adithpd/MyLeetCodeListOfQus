@@ -18,7 +18,7 @@ class Solution(object):
             if dequeue: #Comparing and storing the maximum value of equation "yj + xj + (yi - xi)"
                 maxEqValue = max(maxEqValue, yj + xj + dequeue[0][0])
 
-            while dequeue and dequeue[-1][0] < yj - xj: #Removing all previous "yi-xi" values from dequeue smaller than "xj-yj"
+            while dequeue and dequeue[-1][0] < yj - xj: #Removing all previous "yi-xi" values from dequeue smaller than "xj-yj" from end
                 dequeue.pop()
             
             dequeue.append((yj - xj, xj)) #Adding the current "yj-xj" as "yi-xi" value to dequeue
@@ -36,10 +36,8 @@ The problem is even better as the coordinates array is sorted in ascending
 order of x-coordinates
 
 Find maximum of "yi + yj + |xi - xj|" where "xi < xj" is same as telling you
-Find maximum of "yi - xi + yj + xj"
+Find maximum of "yi + yj -(xi - xj)"
 
-So we are basically moving like a train using "dequeue" ejecting passengers when
-bounds are not met and allowing others to enter.
-
-This approach is basically a sliding window approach based problem 
+So the above eqn can be rewritten as, (yj+xj) + (yi-xi)
+Now the problem boils down to finding maximum in sliding window of k size.
 """
