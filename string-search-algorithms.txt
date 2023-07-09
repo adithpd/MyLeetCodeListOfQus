@@ -1,0 +1,4 @@
+Knuth-Morris-Pratt Algorithm (O(n*m) to O(n+m) based on prefix and suffix)
+Rabin-Karp Algorithm (Sliding Window Approach with Hashing)
+Finite Automata Algorithm
+Boyer-Moore Algorithm
